@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 
+   * DESIGN SYSTEM 2.0: Restrained Luxury 
+   * Philosophy: Apple x Stripe x Linear
+   * Reference: Neutral-forward, Warm, Optical Balance
+   */
+
+  /* Palette - Backgrounds */
+  --bg-primary: #F5F5F7;
+  /* Apple Off-White */
+  --bg-secondary: #FFFFFF;
+  /* Pure White Card */
+  --bg-tertiary: #E8E8ED;
+  /* Muted Stone */
+  --bg-contrast: #1D1D1F;
+  /* Warm Charcoal */
+
+  /* Palette - Text */
+  --text-primary: #1D1D1F;
+  /* Near Black */
+  --text-secondary: #86868B;
+  /* Muted Grey */
+  --text-tertiary: #A1A1A6;
+  /* Disabled / Placeholder */
+  --text-inverse: #F5F5F7;
+  /* Text on Contrast */
+
+  /* Palette - Accent (Selectable - Default: International Orange) */
+  --accent-color: #FF5A1F;
+  --accent-glow: rgba(255, 90, 31, 0.15);
+
+  /* Structure */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  /* Hairline */
+  --border-focus: rgba(0, 0, 0, 0.16);
+
+  /* Animation Timings */
+  --ease-spring: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-page: 220ms;
+  --duration-lazy: 360ms;
+
+  /* Typography Scale (SF Pro Inspired) */
+  --font-hero: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
+}
+
+/* Dark Mode Override (The "Night Service" Mode) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #000000;
+    --bg-secondary: #161617;
+    /* Apple Dark Grey */
+    --bg-tertiary: #2C2C2E;
+    --bg-contrast: #F5F5F7;
+
+    --text-primary: #F5F5F7;
+    --text-secondary: #86868B;
+    --text-inverse: #1D1D1F;
+
+    --border-subtle: rgba(255, 255, 255, 0.12);
+  }
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: -0.011em;
+  /* Tight editorial tracking */
+}
+
+/* Typography Utilities */
+.font-hero {
+  font-family: var(--font-hero);
+  letter-spacing: -0.022em;
+  font-weight: 600;
+}
+
+.font-display {
+  font-family: var(--font-hero);
+  letter-spacing: -0.04em;
+  font-weight: 700;
+}
+
+.font-num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* Global Transition */
+* {
+  transition-property: background-color, border-color, color, opacity, transform;
+  transition-duration: var(--duration-page);
+  transition-timing-function: var(--ease-spring);
+}
+
+/* Scrollbar (Invisible but functional) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

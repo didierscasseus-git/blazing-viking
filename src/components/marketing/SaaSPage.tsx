@@ -42,7 +42,7 @@ const StaggerItem = ({ children }: { children: React.ReactNode }) => (
     </motion.div>
 );
 
-const LandingPage = () => {
+const SaaSPage = () => {
     const { scrollY } = useScroll();
     const heroY = useTransform(scrollY, [0, 500], [0, 150]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
@@ -361,4 +361,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
+export default SaaSPage;

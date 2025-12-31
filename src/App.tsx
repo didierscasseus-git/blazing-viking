@@ -10,7 +10,7 @@ import CookieConsent from './components/features/compliance/CookieConsent';
 import WebsiteEditor from './components/features/website/WebsiteEditor';
 import FloorPlanEditor from './components/features/operations/FloorPlanEditor';
 import PosTerminal from './components/features/operations/PosTerminal';
-import LandingPage from './components/marketing/LandingPage';
+import LandingPage from './components/marketing/SaaSPage';
 
 // Placeholder Pages for routing verification
 const PlaceholderPage = ({ title }: { title: string }) => (
